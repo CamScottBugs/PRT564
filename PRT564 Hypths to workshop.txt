@@ -1,0 +1,54 @@
+Victorian electricity market dynamics and usage throughout pandemic-forced change to working conditions ('working from home').
+
+(we can reframe the RQs into hypotheses, such as Q1: "COVID19 has had a disequilibrating effect on energy consumption...")
+
+Research Q1 - What effect has COVID19-forced WFH had on energy consumption / power prices?
+[Average electricity consumption/demand and price statistics pre/post COVID19 pandemic (1 yr either side of March2020?)]
+
+RQ2 - How has the cost of power been distributed/shared between employee/employer groups?   
+x [Household costs of power(electricity) pre/post pandemic split by income and employment status] 
+x [industry electricity costs/consumption pre/post pandemic  
+x [CBD electricity demand pre/post pandemic, per city  (this gives proxy measure of pandemic effect size on commercial enterprise: cities relatively uneffected such as Darwin expected to have little variation in CBD electircty use pre/post; by contrast Melbourne highly significant difference]
+
+RQ3 - Has household-generated (solar) electricity had an observable effect upon pre/post pandemic WFH power consumption? 
+[average electiricity demand from regions with high solar penetration vs low penetration rates]
+
+RQ4 - What insights do these data provide for equity concerns around future employer-employee WFH-flexiblity contractual arrangements?
+
+RQ5 - How has solar radiation/exposure effected the price and demand of electricty - before and after pandemic? 
+... 
+
+
+Data Processing: Rubric guide
+"Data profiling technique demonstrates proficient use and interpretation of measures of central tendency, measures of spread, inferential statistics, and probability.  
+Incoporate high quality and informative Python visualisation that support effective initial data exploration.  
+Data wrangling proficiency is demonstrated."
+
+
+Workflow:
+
+Data wrangling
+
+1.Trim dataset
+(i) Reduce time horizon to 1 (or2?) years until final row (6 Oct 2020):
+- 2019/10/06 to 2020/10/06  or
+- 2018/10/06 to 2020/10/06
+
+
+(ii) create extra columns:   
+temp_ave (midpoint of temp range) = max_temp - min_temp
+
+(iii)
+Reduce unneccessary dimensions/columns
+(unless these offer any interesting insights?)
+Keep:  date, demand, RRP, frac_at_neg_RRP, solar exposure, temp_ave(new)
+
+2. Profile
+- outlier analysis
+- removal*
+
+3. Cleave dataset
+Profile data over two time series:  pre & post 23/03/2020 (date of first lockdown):
+(i) run descriptive stats over the dual time-series for each variable of interest. 
+
+print(df.describe())*

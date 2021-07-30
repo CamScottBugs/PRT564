@@ -1,0 +1,51 @@
+Topic (under devlpmnt):
+Victorian electricity market dynamics during economic restrictions enforced by pandemic; in particular, state wide adjustments to working and lifestyle conditions ('working from home', WFH).
+
+H1. COVID19 economic 'lockdown' restrictions (and continued change to working conditions) caused a redution in consumption/demand of electrical energy across Victoria.
+
+H2. Lower demand post-pandemic (during lockdowns) resulted in lower power prices.
+
+H3. Solar energy exposure reduced/reduces the price and demand of electricity (pre and post lockdown?). 
+
+H4. High exposure of solar energy had a greater effect on market/network demand during lockdown restrictions / post-pandemic 
+    (because solar generation is consumed locally, reducing distribution demand across network) 
+
+H5. To what extent / How much effect (correlation) does solar energy radiation have upon power prices and nework demand? 
+
+... 
+
+---Workflow----
+
+1. Data wrangling:
+
+(i) Trim dataset
+Reduce length to 1 (or2?) years until final row (6 Oct 2020):
+- 2019/10/06 to 2020/10/06  or
+- 2018/10/06 to 2020/10/06   ?
+
+(ii) create extra columns:   
+temp_ave (midpoint of temp range) = max_temp - min_temp
+
+(iii)  Reduce unneccessary dimensions/columns
+(unless explrty analysis brings any interesting insights?)
+Variables to keep:  date, demand, RRP, frac_at_neg_RRP, solar exposure, temp_ave(new)
+
+
+2. Exploritory Analysis:
+
+(i) Cleave trimmed dataset into two time series:  pre(<) & post(>=) 23/03/2020 (date of first lockdown)
+
+(ii) outlier analysis & removal* (maybe - may be best to present visualisaitons of outliers, but not yet remove)
+
+Profile Data
+(iii) Run descriptive stats over the dual time-series (6/10/19-22/3/20 & 23/3/20-6/10/20) 
+    - for each variable of interest. 
+
+
+From assignment rubric - Data Processing:
+"Data profiling technique demonstrates proficient use and interpretation of measures of central tendency, measures of spread, inferential statistics, and probability.  
+Incoporate high quality and informative Python visualisation that support effective initial data exploration.  
+Data wrangling proficiency is demonstrated."
+
+
+[[print(df.describe())*  --Yakub refered to using this command halfway through last WS (15/4).  I didnt catch whether he meant for As2 or As3]
