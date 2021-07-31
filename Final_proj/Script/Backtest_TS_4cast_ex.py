@@ -5,6 +5,9 @@ from matplotlib import pyplot
 #load data
 series = read_csv('data\Elec_daily_Dmd_2D.csv', header=0, index_col=0)
 
+# dmd2D = ['data','demand']
+# series2D = series['dmd2D']
+
 X = series.values
 splits = TimeSeriesSplit(n_splits=3)
 pyplot.figure(1)
@@ -20,7 +23,7 @@ for train_index, test_index in splits.split(X):
     pyplot.subplot(310 + index)
     pyplot.plot(train)
     pyplot.plot([None for i in train] + [X for X in test])
-    pyplot(xlabel('date'))
+    #pyplot(xlabel('date'))
     index += 1
 pyplot.show()
 
