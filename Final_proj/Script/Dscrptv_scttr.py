@@ -16,7 +16,6 @@ df1.dataframeName = 'Elec_daily_Prc_Dmd.csv'
 nRow, nCol = df1.shape
 print(f'There are {nRow} rows and {nCol} columns')
 print(df1)
-print(df1.head) 
 
 # Scatter /density plotting 
 def plotScatterMatrix(df, plotSize, textSize):
