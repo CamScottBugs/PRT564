@@ -1,4 +1,4 @@
-# PRT564
+# Data Analysis and Visualisation, with Python
  
 This a running file of learning excercises from Python based 'Data Analysis and Visualisation' unit.
 Nothing fancy. Bit of a mess.
